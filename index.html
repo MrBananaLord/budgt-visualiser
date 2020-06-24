@@ -22,6 +22,8 @@
         $(document).ready(function() {
             window.converter = new Converter();
             window.controller = new Controller(window.converter);
+
+            controller.loadData();
         });
     </script>
 </head>
@@ -39,10 +41,10 @@
                     <a class="nav-link" href="#" data-action="upload">Upload</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Persist</a>
+                    <a class="nav-link" href="#" data-action="persist">Persist</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cleanup</a>
+                    <a class="nav-link" href="#" data-action="cleanup">Cleanup</a>
                 </li>
             </ul>
         </div>
