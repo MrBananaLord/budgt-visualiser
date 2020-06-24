@@ -10,3 +10,25 @@
 #chart {
     max-height: 860px;
 }
+
+#expenses {
+    margin: 10px;
+}
+
+#fileInput {
+    position: relative;
+    margin: 10px;
+}
+
+#fileInput button.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+}
+
+#spinner {
+    margin: 10px;
+}

@@ -16,25 +16,50 @@
     <script src="lib/papaparse.min.js"></script>
     <script src="lib/chart.min.js"></script>
     <script src="lib/converter.js"></script>
+    <script src="lib/controller.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
             window.converter = new Converter();
+            window.controller = new Controller(window.converter);
         });
     </script>
 </head>
 
 <body>
+    <nav id="navigation" class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">BUDGT Visualiser</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-action="upload">Upload</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Persist</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cleanup</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div id="fileInput" class="jumbotron">
-        <h1 class="display-4">
-            <span>Drop your BUDGT files here</span>
-            <svg class="bi bi-file-earmark-arrow-down" height="90px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 1h5v1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6h1v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2z"/>
-                <path d="M9 4.5V1l5 5h-3.5A1.5 1.5 0 0 1 9 4.5z"/>
-                <path fill-rule="evenodd" d="M5.646 9.146a.5.5 0 0 1 .708 0L8 10.793l1.646-1.647a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 0-.708z"/>
-                <path fill-rule="evenodd" d="M8 6a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0v-4A.5.5 0 0 1 8 6z"/>
-            </svg>
-        </h1>
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h1 class="display-4">Drop your BUDGT files here</h1>
+    </div>
+    <div id="spinner" class="d-none">
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
     </div>
     <div id="expenses" class="accordion">
     </div>
