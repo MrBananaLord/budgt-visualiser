@@ -1,13 +1,19 @@
 .amount {
     min-width: 10%;
     text-align: right;
+    margin-left: 10px;
 }
 
 .note {
     color: Gray;
+    margin-left: 10px;
 }
 
-#chart {
+.category {
+    margin-left: 10px;
+}
+
+.chart {
     max-height: 860px;
 }
 
@@ -31,4 +37,12 @@
 
 #spinner {
     margin: 10px;
+}
+
+.col-md {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
 }
