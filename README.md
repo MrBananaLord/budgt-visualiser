@@ -1,6 +1,6 @@
 # Roll calculator
 For fun reasons I want to build the calculator with support for dice rolls
-https://mrbananalord.github.io/roll-calculator/
+https://mrbananalord.github.io/budgt-visualiser/
 ## How to?
 ### Running the code
 Open `./index.html`
