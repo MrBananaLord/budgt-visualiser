@@ -13,10 +13,6 @@
     margin-left: 10px;
 }
 
-.chart {
-    max-height: 860px;
-}
-
 #expenses {
     margin: 10px;
 }
@@ -29,10 +25,7 @@
 #fileInput button.close {
     position: absolute;
     top: 15px;
-    right: 15px;
-    font-size: 40px;
-    width: 40px;
-    height: 40px;
+    right: 20px;
 }
 
 #spinner {
@@ -45,4 +38,27 @@
 
 .row {
     margin: 0;
+}
+
+.chart-container {
+    position: relative;
+    height: 960px;
+}
+
+.alert {
+    margin: 10px;
+}
+
+#mainCard {
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+}
+
+#mainCard>.card-header {
+    border-radius: 0;
+}
+
+.card-body {
+    padding: 0;
 }
