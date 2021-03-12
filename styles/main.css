@@ -20,6 +20,7 @@
 #fileInput {
     position: relative;
     margin: 10px;
+    border: 1px solid gray;
 }
 
 #fileInput button.close {
